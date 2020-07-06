@@ -3,7 +3,10 @@
 [![License](https://img.shields.io/badge/license-%20MPL--v2.0-blue.svg)](LICENSE)
 
 
-# xcauto: Arbitrary order exchange-correlation functional derivatives using JAX
+# xcauto
+
+Arbitrary order exchange-correlation functional derivatives using
+[JAX](https://jax.readthedocs.io/)
 
 ![Automatic for the functions, easy for the people](img/cover.png)
 
@@ -15,6 +18,8 @@ functionals** in **Python**.  The focus is not (yet) on performance.  Our hope i
 that this project can make it easier to test new implementations of functional
 derivatives but maybe also used directly to provide functional derivatives in a
 density functional theory program.
+
+The code is in proof of concept stage. We have [ideas for more](#ideas).
 
 
 ## Acknowledgements and recommended citation
