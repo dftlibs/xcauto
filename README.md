@@ -72,6 +72,9 @@ $ flit install --symlink
 
 ## Example
 
+In this example we only go up to first-order derivatives
+but no problem to ask for higher-order derivatives (mixed or not).
+
 First `pip install xcauto`, then:
 
 ```python
