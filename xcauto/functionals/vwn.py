@@ -8,6 +8,8 @@
 
 import jax.numpy as np
 
+from .utils import ufunc
+
 
 def _vwn_a(p):
     return p[0] * p[2] / (p[0] * p[0] + p[0] * p[2] + p[3]) - 1.0
@@ -58,10 +60,6 @@ def _vwn_f(s, p):
     )
 
 
-def _ufunc(x, a):
-    return (1.0 + x) ** a + (1.0 - x) ** a
-
-
 def vwn5_n(n):
     return vwn5_a_b(0.5 * n, 0.5 * n)
 
@@ -77,7 +75,7 @@ def vwn5_a_b(a, b):
     s = r_s ** 0.5
 
     zeta = (a - b) / n
-    g = 1.92366105093154 * (_ufunc(zeta, 4.0 / 3.0) - 2.0)
+    g = 1.92366105093154 * (ufunc(zeta, 4.0 / 3.0) - 2.0)
     zeta4 = zeta ** 4.0
     dd = g * (
         (_vwn_f(s, ferro) - _vwn_f(s, para)) * zeta4
@@ -102,7 +100,7 @@ def vwn3_a_b(a, b):
     s = r_s ** 0.5
 
     zeta = (a - b) / n
-    g = 1.92366105093154 * (_ufunc(zeta, 4.0 / 3.0) - 2.0)
+    g = 1.92366105093154 * (ufunc(zeta, 4.0 / 3.0) - 2.0)
     zeta4 = zeta ** 4.0
     dd = g * (_vwn_f(s, ferro) - _vwn_f(s, para))
 

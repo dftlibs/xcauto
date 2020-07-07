@@ -8,6 +8,7 @@
 
 import jax.numpy as np
 
+from .utils import ufunc
 
 param_gamma = (1.0 - np.log(2.0)) / (np.pi * np.pi)
 # param_beta_pbe_paper = 0.066725
@@ -38,13 +39,9 @@ def _enhancement(R, a, gaa):
     return 1.0 + R - R / t1
 
 
-def _ufunc(x, a):
-    return (1.0 + x) ** a + (1.0 - x) ** a
-
-
 def _omega(z):
-    #   return (_ufunc(z, 4.0 / 3.0) - 2.0) / 0.5198421
-    return (_ufunc(z, 4.0 / 3.0) - 2.0) / (2.0 * 2.0 ** (1.0 / 3.0) - 2.0)
+    #   return (ufunc(z, 4.0 / 3.0) - 2.0) / 0.5198421
+    return (ufunc(z, 4.0 / 3.0) - 2.0) / (2.0 * 2.0 ** (1.0 / 3.0) - 2.0)
 
 
 def _eopt(sqrtr, t):
