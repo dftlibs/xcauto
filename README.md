@@ -69,6 +69,24 @@ $ pip install -r requirements.txt
 $ flit install --symlink
 ```
 
+### Using on the Hylleraas Fleet
+
+The machines in the Fleet are properly set up to run JAX on their GPUs. The instructions to install `xcauto` are slightly modified, since we'll need a GPU-aware version of [JAX](https://jax.readthedocs.io/):
+```
+$ git clone https://github.com/dftlibs/xcauto
+$ cd xcauto
+$ python -m venv venv
+$ source venv/bin/activate
+$ pip isntall -r requirements.txt
+$ pip install --upgrade https://storage.googleapis.com/jax-releases/`nvidia-smi | sed -En "s/.* CUDA Version: ([0-9]*)\.([0-9]*).*/cuda\1\2/p"`/jaxlib-0.1.51-`python3 -V | sed -En "s/Python ([0-9]*)\.([0-9]*).*/cp\1\2/p"`-none-manylinux2010_x86_64.whl jax
+$ flit install --symlink
+```
+
+To run:
+```
+$ env XLA_FLAGS=--xla_gpu_cuda_data_dir=/lib/cuda python -m pytest tests/test.py
+```
+The environment variable **is important**: JAX won't be able to use the GPU otherwise.
 
 ## Example
 
