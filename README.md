@@ -62,7 +62,7 @@ $ pip install xcauto
 Installing a development version:
 ```
 $ git clone https://github.com/dftlibs/xcauto
-$ cd xc
+$ cd xcauto
 $ python -m venv venv
 $ source venv/bin/activate
 $ pip install -r requirements.txt
