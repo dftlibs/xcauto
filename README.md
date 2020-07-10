@@ -166,6 +166,8 @@ pbec_n_gnn
 pbec_a_b_gaa_gab_gbb
 b88_n_gnn
 b88_a_b_gaa_gab_gbb
+lyp_n_gnn
+lyp_a_b_gaa_gab_gbb
 ```
 
 **Where are all the other functionals?** We will be adding more but our hope is
