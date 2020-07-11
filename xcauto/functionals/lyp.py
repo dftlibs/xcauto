@@ -10,7 +10,6 @@ import jax.numpy as np
 
 
 def lyp_a_b_gaa_gab_gbb(a, b, gaa, gab, gbb):
-    # gab not used
 
     A = 0.04918
     B = 0.132
