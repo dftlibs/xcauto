@@ -50,6 +50,7 @@ https://github.com/google/jax#citing-jax:
 
 - Radovan Bast
 - Roberto Di Remigio
+- Ulf Ekström
 
 
 ## Installation
