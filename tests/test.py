@@ -10,11 +10,11 @@ from xcauto.functionals import (
     vwn5_n,
     vwn5_a_b,
     pbex_n_gnn,
-    pbex_a_b_gaa_gab_gbb,
+    pbex_a_b_gaa_gbb,
     pbec_n_gnn,
     pbec_a_b_gaa_gab_gbb,
     b88_n_gnn,
-    b88_a_b_gaa_gab_gbb,
+    b88_a_b_gaa_gbb,
     lyp_n_gnn,
     lyp_a_b_gaa_gab_gbb,
 )
@@ -127,26 +127,23 @@ def test_pbec_unpolarized():
 
 
 def test_pbex_polarized():
-    fun = pbex_a_b_gaa_gab_gbb
+    fun = pbex_a_b_gaa_gbb
     a = 0.02
     b = 0.05
     gaa = 0.02
-    gab = 0.03
     gbb = 0.04
 
-    d_00000 = derv(fun, [a, b, gaa, gab, gbb], [0, 0, 0, 0, 0])
-    d_10000 = derv(fun, [a, b, gaa, gab, gbb], [1, 0, 0, 0, 0])
-    d_01000 = derv(fun, [a, b, gaa, gab, gbb], [0, 1, 0, 0, 0])
-    d_00100 = derv(fun, [a, b, gaa, gab, gbb], [0, 0, 1, 0, 0])
-    d_00010 = derv(fun, [a, b, gaa, gab, gbb], [0, 0, 0, 1, 0])
-    d_00001 = derv(fun, [a, b, gaa, gab, gbb], [0, 0, 0, 0, 1])
+    d_0000 = derv(fun, [a, b, gaa, gbb], [0, 0, 0, 0])
+    d_1000 = derv(fun, [a, b, gaa, gbb], [1, 0, 0, 0])
+    d_0100 = derv(fun, [a, b, gaa, gbb], [0, 1, 0, 0])
+    d_0010 = derv(fun, [a, b, gaa, gbb], [0, 0, 1, 0])
+    d_0001 = derv(fun, [a, b, gaa, gbb], [0, 0, 0, 1])
 
-    assert d_00000 == pytest.approx(-0.030022232676348133)
-    assert d_10000 == pytest.approx(-0.4399544626404114)
-    assert d_01000 == pytest.approx(-0.4179516165421625)
-    assert d_00100 == pytest.approx(-0.037768955504833064)
-    assert d_00010 == pytest.approx(0.0)
-    assert d_00001 == pytest.approx(-0.07798714870271929)
+    assert d_0000 == pytest.approx(-0.030022232676348133)
+    assert d_1000 == pytest.approx(-0.4399544626404114)
+    assert d_0100 == pytest.approx(-0.4179516165421625)
+    assert d_0010 == pytest.approx(-0.037768955504833064)
+    assert d_0001 == pytest.approx(-0.07798714870271929)
 
 
 def test_pbec_polarized():
@@ -187,26 +184,23 @@ def test_b88_unpolarized():
 
 
 def test_b88_polarized():
-    fun = b88_a_b_gaa_gab_gbb
+    fun = b88_a_b_gaa_gbb
     a = 0.02
     b = 0.05
     gaa = 0.02
-    gab = 0.03
     gbb = 0.04
 
-    d_00000 = derv(fun, [a, b, gaa, gab, gbb], [0, 0, 0, 0, 0])
-    d_10000 = derv(fun, [a, b, gaa, gab, gbb], [1, 0, 0, 0, 0])
-    d_01000 = derv(fun, [a, b, gaa, gab, gbb], [0, 1, 0, 0, 0])
-    d_00100 = derv(fun, [a, b, gaa, gab, gbb], [0, 0, 1, 0, 0])
-    d_00010 = derv(fun, [a, b, gaa, gab, gbb], [0, 0, 0, 1, 0])
-    d_00001 = derv(fun, [a, b, gaa, gab, gbb], [0, 0, 0, 0, 1])
+    d_0000 = derv(fun, [a, b, gaa, gbb], [0, 0, 0, 0])
+    d_1000 = derv(fun, [a, b, gaa, gbb], [1, 0, 0, 0])
+    d_0100 = derv(fun, [a, b, gaa, gbb], [0, 1, 0, 0])
+    d_0010 = derv(fun, [a, b, gaa, gbb], [0, 0, 1, 0])
+    d_0001 = derv(fun, [a, b, gaa, gbb], [0, 0, 0, 1])
 
-    assert d_00000 == pytest.approx(-0.03144503226070762)
-    assert d_10000 == pytest.approx(-0.3093251926971783)
-    assert d_01000 == pytest.approx(-0.4049705102105752)
-    assert d_00100 == pytest.approx(-0.11788498562531187)
-    assert d_00010 == pytest.approx(0.0)
-    assert d_00001 == pytest.approx(-0.08629201015426126)
+    assert d_0000 == pytest.approx(-0.03144503226070762)
+    assert d_1000 == pytest.approx(-0.3093251926971783)
+    assert d_0100 == pytest.approx(-0.4049705102105752)
+    assert d_0010 == pytest.approx(-0.11788498562531187)
+    assert d_0001 == pytest.approx(-0.08629201015426126)
 
 
 def test_lyp_unpolarized():

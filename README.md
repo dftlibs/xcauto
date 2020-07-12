@@ -162,11 +162,11 @@ vwn3_a_b
 vwn5_n
 vwn5_a_b
 pbex_n_gnn
-pbex_a_b_gaa_gab_gbb
+pbex_a_b_gaa_gbb
 pbec_n_gnn
 pbec_a_b_gaa_gab_gbb
 b88_n_gnn
-b88_a_b_gaa_gab_gbb
+b88_a_b_gaa_gbb
 lyp_n_gnn
 lyp_a_b_gaa_gab_gbb
 ```

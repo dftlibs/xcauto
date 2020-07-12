@@ -129,8 +129,7 @@ def pbex_n_gnn(n, gnn):
     return pbex_a_gaa(a, gaa) + pbex_a_gaa(b, gbb)
 
 
-def pbex_a_b_gaa_gab_gbb(a, b, gaa, gab, gbb):
-    # gab not used
+def pbex_a_b_gaa_gbb(a, b, gaa, gbb):
     return pbex_a_gaa(a, gaa) + pbex_a_gaa(b, gbb)
 
 

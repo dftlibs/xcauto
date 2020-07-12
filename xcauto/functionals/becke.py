@@ -20,8 +20,7 @@ def _b88_a_gaa(a, gaa):
     return slaterx_a(a) + b88
 
 
-def b88_a_b_gaa_gab_gbb(a, b, gaa, gab, gbb):
-    # gab not used
+def b88_a_b_gaa_gbb(a, b, gaa, gbb):
     return _b88_a_gaa(a, gaa) + _b88_a_gaa(b, gbb)
 
 
@@ -29,6 +28,5 @@ def b88_n_gnn(n, gnn):
     a = 0.5 * n
     b = 0.5 * n
     gaa = 0.25 * gnn
-    gab = None
     gbb = gaa
-    return b88_a_b_gaa_gab_gbb(a, b, gaa, gab, gbb)
+    return b88_a_b_gaa_gbb(a, b, gaa, gbb)
