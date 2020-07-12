@@ -1,0 +1,17 @@
+{
+    "creators": [
+        {
+            "name": "Bast, Radovan"
+        },
+        {
+            "name": "Di Remigio, Roberto"
+        },
+        {
+            "name": "Ekström, Ulf"
+        }
+    ],
+    "license": {
+        "id": "MPL-2.0"
+    },
+    "title": "xcauto: Arbitrary order exchange-correlation functional derivatives using JAX"
+}
