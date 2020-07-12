@@ -1,6 +1,7 @@
 [![Build status](https://github.com/dftlibs/xcauto/workflows/Test/badge.svg)](https://github.com/dftlibs/xcauto/actions)
 [![PyPI badge](https://badge.fury.io/py/xcauto.svg)](https://badge.fury.io/py/xcauto)
 [![License](https://img.shields.io/badge/license-%20MPL--v2.0-blue.svg)](LICENSE)
+[![DOI](https://zenodo.org/badge/277583759.svg)](https://zenodo.org/badge/latestdoi/277583759)
 
 
 # xcauto
